@@ -3,6 +3,10 @@
     <resources>
         <color name="green">#00FF00</color>
         <color name="cyan">#00FFFF</color>
-        <color name="orange">#FF3300</color>
+        <color name="orange">#FF6600</color>
         <color name="pink">#FF69B4</color>
+        <color name="red">#FF0000</color>
+        <color name="poopGreen">#003300</color>
+        <color name="darkBlue">#0000FF</color>
+        <color name="yellow">#FFFF00</color>
     </resources>

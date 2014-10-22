@@ -18,9 +18,9 @@ public class MainActivity extends ActionBarActivity
 	private ArrayList<Integer> colorList;
 	private Button firstScreenButton;
 	private Button colorSwitchButton;
+	private Button buttonColorSwitchButton;
 	private RelativeLayout appLayout;
-	private button buttonColorSwitchButton;
-	//private RelativeLayout appLayout;
+
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
@@ -29,7 +29,7 @@ public class MainActivity extends ActionBarActivity
 		setContentView(R.layout.activity_main);
 		firstScreenButton = (Button) findViewById(R.id.firstScreenButton);
 		colorSwitchButton = (Button) findViewById(R.id.colorSwitchButton);
-		buttonColorSwitchButton = (Button) findViewById(R.id.colorSwitchButton);
+		buttonColorSwitchButton = (Button) findViewById(R.id.buttonColorSwitchButton);
 		appLayout = (RelativeLayout) findViewById(R.id.appLayout);
 		
 		colorList = new ArrayList<Integer>();
@@ -43,6 +43,7 @@ public class MainActivity extends ActionBarActivity
 		colorList.add( R.color.green);
 		colorList.add( R.color.cyan);
 		colorList.add( R.color.orange);	
+		
 	}
 
 	private void setupListeners()
@@ -79,7 +80,13 @@ public class MainActivity extends ActionBarActivity
 			public void onClick(View currentView)
 			{
 				int randomPosition = (int) (Math.random() * colorList.size());
-				appLayout.setBackgroundResource(colorList.get(randomPosition));
+				firstScreenButton.setBackgroundResource(colorList.get(randomPosition));
+				buttonColorSwitchButton.setBackgroundResource(colorList.get(randomPosition));
+				colorSwitchButton.setBackgroundResource(colorList.get(randomPosition));
+				
+				firstScreenButton.setTextColor(colorList.get(randomPosition));
+				buttonColorSwitchButton.setTextColor(colorList.get(randomPosition));
+				colorSwitchButton.setTextColor(colorList.get(randomPosition));
 				
 			}
 			
